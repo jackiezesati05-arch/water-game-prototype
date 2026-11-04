@@ -1,0 +1,185 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #e5f5ed;
+    text-align: center;
+    color: #244b40;
+}
+
+.game-container {
+    max-width: 850px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #168b78;
+}
+
+.instructions {
+    font-size: 16px;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    margin: 20px 0;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.living-room {
+    position: relative;
+    height: 420px;
+    overflow: hidden;
+    border: 6px solid #986b47;
+    border-radius: 15px;
+    background:
+        linear-gradient(to bottom,
+        #f8dcb5 0%,
+        #f8dcb5 68%,
+        #b98256 68%,
+        #b98256 100%);
+}
+
+.window {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-size: 55px;
+}
+
+.sofa {
+    position: absolute;
+    top: 95px;
+    left: 35%;
+    font-size: 85px;
+}
+
+.plant {
+    position: absolute;
+    font-size: 55px;
+}
+
+.plant-one {
+    bottom: 35px;
+    right: 20px;
+}
+
+.table {
+    position: absolute;
+    bottom: 20px;
+    left: 45%;
+    font-size: 55px;
+}
+
+.rug {
+    position: absolute;
+    bottom: 5px;
+    left: 20%;
+    width: 60%;
+    height: 90px;
+    border-radius: 50%;
+    background: #d8a0a0;
+    opacity: 0.65;
+}
+
+.bottle {
+    position: absolute;
+    z-index: 2;
+    width: 55px;
+    height: 65px;
+    border: 2px solid #ffffff;
+    border-radius: 12px;
+    background: #c6f0ff;
+    font-size: 25px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.bottle:hover {
+    transform: scale(1.2);
+}
+
+.bottle.empty {
+    background: #eeeeee;
+}
+
+.bottle:disabled {
+    cursor: default;
+    opacity: 0.5;
+}
+
+.message {
+    margin: 15px;
+    font-weight: bold;
+    min-height: 24px;
+}
+
+button {
+    background: #168b78;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #106b5c;
+}
+
+.end-screen {
+    background: white;
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px #0002;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Confetti celebration */
+
+.confetti {
+    position: fixed;
+    top: -15px;
+    width: 10px;
+    height: 14px;
+    z-index: 10;
+    pointer-events: none;
+    animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(105vh) rotate(720deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .living-room {
+        height: 380px;
+    }
+
+    .game-info {
+        font-size: 14px;
+    }
+
+    .sofa {
+        left: 30%;
+        font-size: 65px;
+    }
+}

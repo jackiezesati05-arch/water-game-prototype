@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Water Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <h1>💧 Clean Water Challenge</h1>
+        <p class="instructions">
+            Collect all the full water bottles before time runs out!
+            Avoid empty bottles!
+        </p>
+
+        <div class="game-info">
+            <div>Score: <span id="score">0</span></div>
+            <div>Time: <span id="timer">30</span>s</div>
+            <div>Left: <span id="remaining">8</span></div>
+        </div>
+
+        <div id="living-room" class="living-room">
+            <div class="window">☀️</div>
+            <div class="sofa">🛋️</div>
+            <div class="plant plant-one">🪴</div>
+            <div class="table">🪑</div>
+            <div class="rug"></div>
+
+            <!-- Bottles will appear here -->
+        </div>
+
+        <div id="message" class="message">
+            Find all 8 full water bottles!
+        </div>
+
+        <button id="reset-button">🔄 Reset Game</button>
+
+        <div id="end-screen" class="end-screen hidden">
+            <h2 id="end-title"></h2>
+            <p id="end-message"></p>
+            <button id="play-again">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
